@@ -37,7 +37,6 @@ MESSAGE_TAGS = {
 
 INSTALLED_APPS = [
     'app_one',
-    'debug_toolbar',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
