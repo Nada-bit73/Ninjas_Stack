@@ -125,5 +125,10 @@ class Comment(models.Model):
     message = models.ForeignKey(
         Message, related_name="comments", on_delete=models.CASCADE)
     comment = models.TextField()
+    likes = models.ManyToManyField(User, related_name="blogpost_like")
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+    def number_of_likes(self):
+        return self.likes.count()
+    
+

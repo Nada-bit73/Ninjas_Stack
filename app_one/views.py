@@ -1,16 +1,22 @@
+from multiprocessing import context
 import bcrypt
 from django.http import HttpResponse
 from django.shortcuts import render
 from django.shortcuts import redirect, render
+from flask import request
 from app_one.models import Comment, Message, User
 from django.contrib import messages
 import re
+from django.urls import reverse
+from django.shortcuts import get_object_or_404
+from django.http import HttpResponseRedirect
+from django.views.generic.detail import DetailView
 
 
 def index(request):
     return render(request, "home.html")
 
-
+# 12@Hh6453
 def register(request):
     if request.method == "POST":
         errors = User.objects.basic_validator(request.POST)
@@ -57,6 +63,17 @@ def signin(request):
                 messages.error(request, "You do not have an account ,Please Register first !")
                
     return render(request, "signin.html")
+
+def BlogPostLike(request,userId):
+    if "loggedInUser" in request.session:
+        user = User.objects.get(id=request.session["loggedInUser"])
+        post = get_object_or_404(Comment, id=request.POST.get('blogpost_id'))
+        if post.likes.filter(id=user.id).exists():
+            post.likes.remove(user)
+        else:
+            post.likes.add(user)
+       
+    return redirect(f"/users/show/{ userId }")
 
 def dashboard(request):
     if "loggedInUser" in request.session:
@@ -248,6 +265,8 @@ def userEditDesc(request, userId):
 def show_user(request, id):
     context = {
         "user": User.objects.get(id=id),
+        "myuser" : User.objects.get(id=request.session["loggedInUser"])
+
     }
     return render(request, "userShow.html", context)
 
