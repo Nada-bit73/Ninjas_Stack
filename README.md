@@ -89,7 +89,7 @@ python manage.py migrate
 ### Authors
 - [Nada Alsogour](https://github.com/Nada-bit73)
 - [Sarah Alsaedi](https://github.com/sarah-47)
-- [Reem Allharbi](ReemAllharbi (Reem Alharbi) (github.com))
+- [Reem Allharbi](https://github.com/ReemAllharbi)
 - [Amal Aldawsari](https://github.com/amalsaud)
 
 ### Acknowledgements
