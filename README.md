@@ -51,40 +51,52 @@ Now the Admin has all the previos featurs plus the following :
 
 - Remove existing users .
 
+## Getting Started
 
+### Installing Dependencies
 
+#### Python 3
 
-### Getting Started
-Installing Dependencies
-Python 3
+Follow instructions to install the latest version of python for your platform in the [python docs](https://docs.python.org/3/using/unix.html#getting-and-installing-the-latest-version-of-python)
 
-Follow instructions to install the latest version of python for your platform in the python docs
+#### Virtual Enviornment
 
-Virtual Enviornment
+We recommend working within a virtual environment whenever using Python for projects. This keeps your dependencies for each project separate and organaized. Instructions for setting up a virual enviornment for your platform can be found in the [python docs](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/)
 
-We recommend working within a virtual environment whenever using Python for projects. This keeps your dependencies for each project separate and organaized. Instructions for setting up a virual enviornment for your platform can be found in the python docs
+#### PIP Dependencies
 
-PIP Dependencies
+Once you have your virtual environment setup and running, install dependencies by naviging to the `NinjaStack` directory and running:
 
-Once you have your virtual environment setup and running, install dependencies by naviging to the NinjaStack directory and running:
-
+```bash
 pip install -r requirements.txt
+```
 
-This will install all of the required packages within the requirements.txt file.
+This will install all of the required packages within the `requirements.txt` file.
 
-Running the project
-Start the project locally
+### Running the project
 
-From within the NinjaStack directory, first ensure you are working using your created virtual environment.
+#### Start the project locally
+
+From within the `NinjaStack` directory, first ensure you are working using your created virtual environment.
 
 To run the server, execute:
 
+```bash
 python manage.py runserver
+```
 
 Then, for database migration, execute:
 
+```bash
 python manage.py makemigrations
+```
+
+```bash
 python manage.py migrate
+```
+
+### Deployment
+This app is hosted on:
 
 ### Authors
 - [Nada Alsogour](https://github.com/Nada-bit73)
