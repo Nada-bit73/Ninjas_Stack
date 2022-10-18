@@ -4,7 +4,7 @@
 
 Ninja's Stack was developed during Coding Dojo Software Development Immersive Full-Time Bootcamp.
 
-Ninja's Stack is a website developed using the Python web framework Django. Frontend for Ninja's Stack was developed using the Bootstrap framework.
+Ninja's Stack is a website developed using Django framework. Frontend for Ninja's Stack was developed using the Bootstrap framework.
 
 Our project covers all learned concepts: Restful Routing, Validations with Django, and Deployment.
 
